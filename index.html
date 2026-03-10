@@ -6,6 +6,7 @@
 <title>Happy Birthday 🎂</title>
 
 <style>
+
 body{
     margin:0;
     font-family:Arial;
@@ -26,6 +27,7 @@ h1{
     width:70%;
     margin:auto;
     font-size:22px;
+    line-height:1.6;
 }
 
 /* Kue */
@@ -33,6 +35,11 @@ h1{
     font-size:120px;
     margin-top:30px;
     cursor:pointer;
+    transition:0.3s;
+}
+
+.cake:hover{
+    transform:scale(1.1);
 }
 
 /* Tombol */
@@ -45,6 +52,10 @@ button{
     color:#ff4d79;
     cursor:pointer;
     margin-top:25px;
+}
+
+button:hover{
+    transform:scale(1.1);
 }
 
 /* Galeri */
@@ -84,7 +95,7 @@ button{
 <p class="message">
 Semoga di hari spesial ini kamu selalu diberikan kesehatan,
 kebahagiaan, dan semua impianmu bisa tercapai.  
-Terima kasih sudah menjadi orang yang luar biasa. ✨
+Terima kasih sudah menjadi orang yang luar biasa dalam hidupku. ✨
 </p>
 
 <div class="cake" onclick="blowCandle()">
@@ -99,44 +110,44 @@ Terima kasih sudah menjadi orang yang luar biasa. ✨
 
 <div class="gallery">
 <h2>Kenangan Kita 📸</h2>
+
 <img src="foto1.jpg">
 <img src="foto2.jpg">
+
 </div>
 
 <button onclick="playMusic()">Play Music 🎵</button>
 
-<audio id="bgmusic">
+<audio id="bgmusic" loop>
 <source src="music1.mp3" type="audio/mpeg">
 </audio>
 
 <script>
-function playMusic(){
-document.getElementById("bgmusic").play();
-}
-</script>
 
-<script>
+/* musik */
+function playMusic(){
+let music=document.getElementById("bgmusic");
+music.play();
+}
 
 /* pesan spesial */
 function showMessage(){
-alert("🎉 Selamat Ulang Tahun, Bu Bos yang Paling Berisik!
-Selamat ulang tahun, Sayang. Hari ini adalah hari di mana dunia harus berterima kasih karena telah menghadirkan satu manusia paling unik, paling ajaib, dan paling menggemaskan sepertimu. Saat aku menulis ini, aku sambil tersenyum membayangkan wajahmu yang mungkin sedang cemberut, atau mungkin sedang asyik mengunyah jajanan favoritmu tanpa peduli dunia sekitar.
+alert(`🎉 Selamat Ulang Tahun!
 
-Aku ingin jujur padamu. Menghadapi kamu itu terkadang rasanya seperti naik roller coaster tanpa sabuk pengaman. Sifat kekanak-kanakanmu itu sering kali membuatku geleng-geleng kepala. Kamu bisa merajuk hanya karena hal sepele, atau tiba-tiba manja minta perhatian di saat yang paling tidak terduga. Ditambah lagi dengan mood-mu yang bisa berubah lebih cepat daripada pergantian musim; detik ini kamu tertawa bahagia, detik berikutnya kamu bisa diam seribu bahasa hanya karena aku telat membalas pesanmu sepuluh menit. Tapi, tahukah kamu? Justru ketidakpastian itulah yang membuat hari-hariku tidak pernah membosankan. Aku belajar untuk menjadi lebih sabar, lebih peka, dan lebih kuat untuk menjadi sandaranmu.
+Selamat ulang tahun, Sayang. Hari ini adalah hari spesial untuk seseorang yang sangat berarti dalam hidupku.
 
-Lalu, ada sisi cerewetmu. Kadang aku berpikir, dari mana datangnya semua energi itu? Kamu bisa menceritakan hal yang sama berulang kali, mengomentari apa saja yang kita lihat di jalan, atau sekadar memprotes hal-hal kecil dengan nada bicaramu yang khas. Tapi sejujurnya, saat suasana hening, aku justru merindukan suaramu. Rumah dan hatiku terasa sepi tanpa celotehanmu yang memenuhi udara. Jangan pernah berhenti bicara ya, karena setiap kata yang keluar dari mulutmu adalah musik yang paling aku sukai.
+Mungkin kamu sering merasa tidak sempurna, tapi bagiku kamu adalah orang yang paling istimewa. 
+Sifat manja, cerewet, dan semua hal kecil tentangmu justru membuat hidupku terasa lebih berwarna.
 
-Kita juga tidak bisa melupakan hobi nomor satumu: jajan. Aku selalu takjub melihat betapa semangatnya kamu kalau sudah melihat tukang camilan di pinggir jalan. Bagimu, bahagia itu sederhana; cukup sebungkus jajanan micin atau segelas minuman manis, dan duniamu langsung cerah kembali. Aku berjanji, di umurmu yang baru ini, aku akan tetap menjadi orang yang paling depan menemanimu berburu kuliner, mencicipi semua jajanan baru, dan memastikan perutmu selalu kenyang (meskipun setelah itu kamu akan mengeluh takut gendut).
+Terima kasih sudah hadir dalam hidupku dan menjadi bagian dari hari-hariku.
 
-Sayang, aku tahu terkadang kamu merasa tidak percaya diri dengan fisikmu. Kamu sering mengeluh karena merasa kurang tinggi atau karena hidungmu yang kamu sebut "pesek" itu. Tapi bagiku, kamu adalah definisi kecantikan yang paling pas. Tubuh mungilmu itu membuatku selalu ingin memeluk dan melindungimu. Dan hidung pesekmu itu? Bagiku itu adalah bagian paling ikonik dan manis yang pernah ada. Itu adalah tempat favoritku untuk mencubit gemas saat kamu sedang bertingkah lucu. Jangan pernah merasa kurang, karena di mataku, kamu sudah lebih dari cukup. Kamu adalah karya seni Tuhan yang paling indah yang dikirimkan untuk melengkapi hidupku.
+Di umurmu yang baru ini, aku hanya berharap kamu selalu sehat, selalu bahagia, dan semua impianmu bisa tercapai.
 
-Terima kasih sudah bertahan bersamaku sejauh ini. Terima kasih sudah mengizinkanku melihat semua versimu; versi ceriamu, versi cengengmu, versi marahmu, hingga versi paling manjamu. Di usiamu yang baru ini, aku tidak berharap kamu berubah menjadi orang lain yang lebih dewasa atau lebih tenang. Tetaplah menjadi dirimu yang apa adanya. Tetaplah jadi si kecil yang cerewet, si hobi jajan yang ceria, dan si manja yang selalu membutuhkanku.
-
-Aku berjanji untuk tetap di sini, menjadi orang yang akan meredakan mood swing-mu, orang yang akan mendengarkan semua ceritamu, dan orang yang akan selalu membelikanmu jajanan saat kamu sedih. Selamat ulang tahun, cintaku. Semoga kebahagiaan selalu memelukmu seerat aku memelukmu hari ini.🎂");
+Selamat ulang tahun cintaku. 🎂✨`);
 }
 
 /* animasi confetti */
-for(let i=0;i<100;i++){
+for(let i=0;i<120;i++){
 let confetti=document.createElement("div");
 confetti.className="confetti";
 confetti.style.left=Math.random()*100+"vw";
