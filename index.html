@@ -1,23 +1,96 @@
 <!DOCTYPE html>
+
 <html>
 <head>
-<title>Website Nobelis</title>
+<meta charset="UTF-8">
+<title>Happy Birthday 🎉</title>
+
 <style>
 body{
-    background-color:#f2f2f2;
+    margin:0;
+    font-family:Arial, sans-serif;
     text-align:center;
-    font-family:Arial;
+    background:linear-gradient(120deg,#ff9a9e,#fad0c4);
+    color:white;
 }
+
+/* Judul */
 h1{
-    color:blue;
+    margin-top:60px;
+    font-size:50px;
+}
+
+/* Pesan */
+.message{
+    font-size:22px;
+    width:70%;
+    margin:auto;
+    margin-top:20px;
+}
+
+/* Tombol */
+button{
+    margin-top:30px;
+    padding:15px 30px;
+    font-size:18px;
+    border:none;
+    border-radius:10px;
+    background:#ff4081;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#ff1f63;
+}
+
+/* Balon */
+.balloon{
+    position:fixed;
+    bottom:-120px;
+    width:60px;
+    animation:float 8s infinite;
+}
+
+@keyframes float{
+    from{transform:translateY(0);}
+    to{transform:translateY(-120vh);}
 }
 </style>
+
 </head>
 
 <body>
 
-<h1>Selamat Datang</h1>
-<p>Website ini dibuat menggunakan HTML dan GitHub Pages.</p>
+<h1>🎂 Selamat Ulang Tahun, Aisyah! 🎉</h1>
+
+<p class="message">
+Hari ini adalah hari spesial untukmu.  
+Semoga di usia yang baru ini kamu selalu diberi kesehatan,
+kebahagiaan, dan semua impianmu bisa tercapai.  
+Terima kasih sudah menjadi orang yang luar biasa dalam hidup kami.  
+Semoga harimu penuh senyuman dan kejutan indah! ✨
+</p>
+
+<button onclick="showMessage()">Klik untuk pesan spesial 💌</button>
+
+<!-- Musik -->
+
+<audio autoplay loop>
+<source src="musik.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Balon animasi -->
+
+<img class="balloon" src="https://cdn-icons-png.flaticon.com/512/744/744546.png" style="left:15%">
+<img class="balloon" src="https://cdn-icons-png.flaticon.com/512/744/744546.png" style="left:40%; animation-delay:2s">
+<img class="balloon" src="https://cdn-icons-png.flaticon.com/512/744/744546.png" style="left:70%; animation-delay:4s">
+
+<script>
+function showMessage(){
+    alert("🎉 Selamat ulang tahun! Semoga semua harapanmu terkabul 🎂");
+}
+</script>
 
 </body>
 </html>
