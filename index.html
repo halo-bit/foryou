@@ -103,9 +103,17 @@ Terima kasih sudah menjadi orang yang luar biasa. ✨
 <img src="foto2.jpg">
 </div>
 
-<audio autoplay loop>
+<button onclick="playMusic()">Play Music 🎵</button>
+
+<audio id="bgmusic">
 <source src="music1.mp3" type="audio/mpeg">
 </audio>
+
+<script>
+function playMusic(){
+document.getElementById("bgmusic").play();
+}
+</script>
 
 <script>
 
