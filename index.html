@@ -3,93 +3,131 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Happy Birthday 🎉</title>
+<title>Happy Birthday 🎂</title>
 
 <style>
 body{
     margin:0;
-    font-family:Arial, sans-serif;
+    font-family:Arial;
     text-align:center;
-    background:linear-gradient(120deg,#ff9a9e,#fad0c4);
+    background:linear-gradient(135deg,#ff758c,#ff7eb3);
     color:white;
+    overflow-x:hidden;
 }
 
 /* Judul */
 h1{
     margin-top:60px;
-    font-size:50px;
+    font-size:55px;
 }
 
 /* Pesan */
 .message{
-    font-size:22px;
     width:70%;
     margin:auto;
-    margin-top:20px;
+    font-size:22px;
+}
+
+/* Kue */
+.cake{
+    font-size:120px;
+    margin-top:30px;
+    cursor:pointer;
 }
 
 /* Tombol */
 button{
-    margin-top:30px;
-    padding:15px 30px;
+    padding:12px 25px;
     font-size:18px;
     border:none;
     border-radius:10px;
-    background:#ff4081;
-    color:white;
+    background:white;
+    color:#ff4d79;
     cursor:pointer;
+    margin-top:25px;
 }
 
-button:hover{
-    background:#ff1f63;
+/* Galeri */
+.gallery img{
+    width:200px;
+    border-radius:15px;
+    margin:10px;
+    transition:0.3s;
 }
 
-/* Balon */
-.balloon{
-    position:fixed;
-    bottom:-120px;
-    width:60px;
-    animation:float 8s infinite;
+.gallery img:hover{
+    transform:scale(1.1);
 }
 
-@keyframes float{
-    from{transform:translateY(0);}
-    to{transform:translateY(-120vh);}
+/* Confetti */
+.confetti{
+    position:absolute;
+    width:8px;
+    height:8px;
+    background:white;
+    animation:fall linear infinite;
 }
+
+@keyframes fall{
+    from{transform:translateY(-100vh);}
+    to{transform:translateY(100vh);}
+}
+
 </style>
 
 </head>
 
 <body>
 
-<h1>🎂 Selamat Ulang Tahun, Aisyah! 🎉</h1>
+<h1>🎉 Selamat Ulang Tahun! 🎂</h1>
 
 <p class="message">
-Hari ini adalah hari spesial untukmu.  
-Semoga di usia yang baru ini kamu selalu diberi kesehatan,
+Semoga di hari spesial ini kamu selalu diberikan kesehatan,
 kebahagiaan, dan semua impianmu bisa tercapai.  
-Terima kasih sudah menjadi orang yang luar biasa dalam hidup kami.  
-Semoga harimu penuh senyuman dan kejutan indah! ✨
+Terima kasih sudah menjadi orang yang luar biasa. ✨
 </p>
 
-<button onclick="showMessage()">Klik untuk pesan spesial 💌</button>
+<div class="cake" onclick="blowCandle()">
+🎂
+</div>
 
-<!-- Musik -->
+<p>Klik kuenya untuk meniup lilin 🎂</p>
+
+<button onclick="showMessage()">Buka Pesan Spesial 💌</button>
+
+<br><br>
+
+<div class="gallery">
+<h2>Kenangan Kita 📸</h2>
+<img src="foto1.jpg">
+<img src="foto2.jpg">
+</div>
 
 <audio autoplay loop>
 <source src="musik.mp3" type="audio/mpeg">
 </audio>
 
-<!-- Balon animasi -->
-
-<img class="balloon" src="https://cdn-icons-png.flaticon.com/512/744/744546.png" style="left:15%">
-<img class="balloon" src="https://cdn-icons-png.flaticon.com/512/744/744546.png" style="left:40%; animation-delay:2s">
-<img class="balloon" src="https://cdn-icons-png.flaticon.com/512/744/744546.png" style="left:70%; animation-delay:4s">
-
 <script>
+
+/* pesan spesial */
 function showMessage(){
-    alert("🎉 Selamat ulang tahun! Semoga semua harapanmu terkabul 🎂");
+alert("🎉 Selamat ulang tahun! Semoga semua harapanmu terkabul 🎂");
 }
+
+/* animasi confetti */
+for(let i=0;i<100;i++){
+let confetti=document.createElement("div");
+confetti.className="confetti";
+confetti.style.left=Math.random()*100+"vw";
+confetti.style.animationDuration=(3+Math.random()*5)+"s";
+document.body.appendChild(confetti);
+}
+
+/* tiup lilin */
+function blowCandle(){
+alert("✨ Make a wish! Semoga semua harapanmu tercapai ✨");
+}
+
 </script>
 
 </body>
